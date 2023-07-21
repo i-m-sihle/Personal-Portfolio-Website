@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
 header {
     /* height: 80px; */
     width: 100%;
@@ -55,16 +59,63 @@ main {
     background-color: rgba(227, 208, 185, 0.7);
 }
 
-main .content {
+
+section {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+    padding-block: 2rem;
+    padding-inline: 2rem;
+
+}
+
+
+
+.content-1__img-container, .content-2__img-container {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        display: flex;
+    }
+
+    .content-1__img-container, .content-2__img-container {
+        max-width: 50%;
+    }    
+}
+
+
+.content-1__text-content, .content-2__text-content {
+    display: grid;
+    gap: 1rem;
+    align-self: center;
+    height: fit-content;
+    text-align: center;
+}
+
+
+
+section img {
+    width: 100%;
+}
+
+.section2 {
+    flex-direction: row-reverse;
+}
+
+
+
+/* main .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: .5rem;
     padding: 2rem;
-}
+} */
 
 
-main .content__img {
+/* main .content__img {
     width: 80%;
 }
 
@@ -73,19 +124,16 @@ main .content__img1 img {
     max-width: 50%;
     border: 3px solid #884A39;
     border-radius: 10px;
-    /* margin-right: 0px; */
-    /* height: 50%; */
+
     margin-top: 15rem;
 }
 main .content__img2 img {
-    max-width: 50%;                                   
+    max-width: 50%;
     border: 3px solid #884A39;
     border-radius: 10px;
-    /* margin-right: 0px; */
-    /* height: 50%; */
+
     margin-bottom: 15rem;
-    /* margin-right: 200px; */
-}
+} */
 
 
 footer{
@@ -98,11 +146,13 @@ footer{
 
 }
 
+p{
+    font-size: 20px;
+    font-family: 'Shadows Into Light', cursive;
+}
 .container{
-    /* display: flex; */
     max-width: 500px;
     margin: 0 auto;
-    /* height: 30px; */
 }
 .container {
     display: flex;
@@ -131,34 +181,7 @@ footer .container a img {
     width: 50%;
 }  
 
-.part1 h2{ 
-    color: black;
-    font-size: 30px;
-    font-family: 'Indie Flower', cursive;
-    margin-top: 5rem;
-    
-}
-.part2 h2{ 
-    color: black;
-    font-size: 30px;
-    font-family: 'Indie Flower', cursive;
-    margin-top: -5rem;
-    
-}
-
-p{
-    font-size: 20px;
-    font-family: 'Shadows Into Light', cursive;
-    margin-right: 30px;
-    /* margin-top: rem; */
-}
-
-.part1{
-    display: flex;
-    flex-direction: column-reverse;
-}
 
 
-/* .part2{
-} */
-    
+
+
