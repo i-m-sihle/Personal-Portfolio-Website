@@ -14,11 +14,42 @@ header {
     
 }
 
+
+.hamburger {
+    position: relative;
+
+}
+
+.hamburger i {
+
+    color: #884A39;
+}
+
+.hamburger .fa-bars {
+    display: inline-block;
+    top: 0;
+}
+
+.hamburger .fa-bars.active {
+    display: none;
+}
+
+.hamburger .fa-xmark {
+    display: none;
+}
+.hamburger .fa-xmark.active {
+    display: inline-block;
+}
+
+
+
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: .5rem 2rem;
+    position: relative;
 }
 
 
@@ -31,13 +62,28 @@ nav .logo {
 
 nav .navMenu {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
     list-style: none;
+    position: absolute;
+    background-color: rgba(227, 208, 185, 0.7);
+    left: 0;
+    right: 0;
+    margin-inline: 2rem;
+    padding-block: 2rem;
+    border-radius: 10px;
+    transform: translateY(-20rem);
+    transition: transform 500ms ease-in-out;
+}
+
+nav .navMenu.active {
+    transform: translateY(10rem);
 }
 
 nav .navMenu .navItems .navLinks{
     color: #fff;
+    font-weight: 800;
     text-decoration: none;
     transition: 300ms ease-in-out;
 }
@@ -119,12 +165,12 @@ main .content .icons a img {
 }
 
 .name h1 {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 500;
 }
 
 .name span {
-    font-size: 1.5rem;
+    font-size: clamp(2rem, 10vw + .5rem, 4rem);
     font-weight: 700;
 }
 
@@ -136,16 +182,13 @@ main .content .icons a img {
 
 
 .ptag{
-    font-size: 20px;
+    font-size: 1.5rem;
     font-family: 'Shadows Into Light', cursive;
-    margin-right: 4px 0px;
 }
 
 footer{
-    /* display: flex; */
     padding: 20px;
     background-color: rgba(180, 132, 108, 0.8);
-    /* clear: both; */
 
 }
 
@@ -155,5 +198,20 @@ footer{
     margin: 0 auto;
 }
 
+
+
+
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav .navMenu {
+        flex-direction: row;
+        transform: translateY(0);
+        background-color: unset;
+        position: unset;
+    }
+}
 
 
