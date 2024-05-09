@@ -1,5 +1,4 @@
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -9,22 +8,16 @@ body {
     overflow-y: hidden;
 }
 
-
 header {
-    /* height: 80px; */
     width: 100%;
     background-color: rgba(180, 132, 108, 0.8);
-    
 }
-
 
 .hamburger {
     position: relative;
-
 }
 
 .hamburger i {
-
     color: #884A39;
 }
 
@@ -40,12 +33,10 @@ header {
 .hamburger .fa-xmark {
     display: none;
 }
+
 .hamburger .fa-xmark.active {
     display: inline-block;
 }
-
-
-
 
 nav {
     display: flex;
@@ -55,12 +46,11 @@ nav {
     position: relative;
 }
 
-
 nav .logo {
     font-size: 3rem;
     color: #fff;
     text-decoration: none;
-    font-family: 'Comforter', cursive;
+    font-family: 'Indie Flower', cursive; /* Change font family to 'Indie Flower' */
 }
 
 nav .navMenu {
@@ -82,7 +72,7 @@ nav .navMenu.active {
     transform: translateY(10rem);
 }
 
-nav .navMenu .navItems .navLinks{
+nav .navMenu .navItems .navLinks {
     color: #fff;
     font-weight: 800;
     text-decoration: none;
@@ -94,15 +84,12 @@ nav .navMenu .navItems .navLinks:hover {
     font-weight: 600;
 }
 
-
 nav .navMenu .navItems .navLinks.active {
     color: #884A39;
 }
 
-
 main {
     background-color: rgba(227, 208, 185, 0.7);
-    /* min-height: 100vh; */
 }
 
 main .content {
@@ -120,23 +107,21 @@ main .content {
     }
 }
 
-
 main .content__img {
     width: 30%;
 }
-
 
 main .content__img img {
     max-width: 100%;
     border: 3px solid #884A39;
     border-radius: 10px;
 }
+
 main .content__img2 img {
     max-width: 70%;
     border: 3px solid #884A39;
     border-radius: 10px;
 }
-
 
 main .content .content__text .icons {
     display: flex;
@@ -153,8 +138,6 @@ main .content .content__text .icons a > img {
     width: 100%;
 }
 
-
-
 main .content .icons a img {
     width: 5%;
 }
@@ -162,7 +145,6 @@ main .content .icons a img {
 .name {
     display: grid;
     font-family: 'Indie Flower', cursive;
-
 }
 
 .name h1 {
@@ -179,28 +161,21 @@ main .content .icons a img {
     text-align: center;
 }
 
-
-
-
-.ptag{
+.ptag {
     font-size: 1.5rem;
     font-family: 'Shadows Into Light', cursive;
 }
 
-footer{
+footer {
     padding: 20px;
     background-color: rgba(180, 132, 108, 0.8);
-
 }
 
-.container{
+.container {
     display: flex;
     max-width: 500px;
     margin: 0 auto;
 }
-
-
-
 
 @media screen and (min-width: 768px) {
     .hamburger {
@@ -214,5 +189,3 @@ footer{
         position: unset;
     }
 }
-
-

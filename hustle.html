@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Indie+Flower&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/hustle.css">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <title>Portfolio Website</title>
     
@@ -21,41 +21,25 @@
             <!-- <h2 class="logo">SN</h2> -->
             <ul class="navMenu">
                 <li class="navItems"><a href="./about.html"  class="navLinks ">About Me</a></li>
-                <li class="navItems"><a href="./hustle.html" class="navLinks active">Side Hustle</a></li>
                 <li class="navItems"><a href="./youtube.html" class="navLinks">Youtube</a></li>
+                <li class="navItems"><a href="./hustle.html" class="navLinks active" >Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="section1">
-            <div class="content-1__img-container">
-                <img src="img/45 Knotless Braid Styles 2023_ Jumbo, Lose Braids & More _ ThriveNaija.jpeg" alt="">
-            </div>
+  <main>
+    
+        <div class="container"></div>
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>Get in touch</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" id="email" placeholder="Your Email" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <textarea id="message" rows="5" placeholder="Im all ears.... "></textarea>
+            <button type="submit">Send</button>
+        </form>
 
-            <div class="content-1__text-content">
-                <h2>Plug_by _Sihle</h2>
-
-                <p>I dont gate keep so i plug all my people here on everything. One of my biggest plugs is that i am a braider(knotless braids, artificial locs and many more).</p>
-            </div>
-
-        </section>
-
-        <section class="section2">
-            <div class="content-2__img-container">
-                <img src="img/aboutme.jpg" alt="">
-            </div>
-
-            <div class="content-2__text-content">
-                <h2>Business 2</h2>
-
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aspernatur sequi iste repellendus, magnam incidunt ratione iusto commodi qui voluptas modi ex voluptates pariatur quas numquam quasi earum ad culpa.</p>
-            </div>
-
-        </section>
-
-
-    </main>
+</main>
 
     <footer>
         <div class="container">
@@ -73,6 +57,22 @@
         </div>
     </footer>
 
-    
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "ndlovusihle875@gmail.com",
+            Password : "Sihle123!",
+            To : 'sindlov022@student.wethinkcode.co.za',
+            From : document.getElementById("email").value,
+            Subject : "New Contact Form Enquiry",
+            Body : "And this is the body"
+        }).then(
+        message => alert(message)
+        );
+                }
+    </script>
 </body>
 </html>
