@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     overflow-y: hidden;
+    min-height: 100%;
+    background-color: rgba(227, 208, 185, 0.7); /* Background color of the entire body */
 }
 
 header {
@@ -50,7 +56,8 @@ nav .navMenu .navItems .navLinks.active {
 }
 
 main {
-    background-color: rgba(227, 208, 185, 0.7);
+    background-color: rgba(227, 208, 185, 0.7); /* Background color of the main content */
+    min-height: calc(100vh - 180px); /* Adjust the height to leave space for the footer */
 }
 
 main .content {
@@ -79,22 +86,18 @@ main .content__img2 img {
     margin-bottom: 15rem;
 }
 
-/* .container {
-    max-width: 500px;
-    margin: 0 auto;
-} */
-
 form {
-    background: #fff;
+    background: rgba(185, 143, 123, 0.8); /* Set the background color of the form */
     display: flex;
     flex-direction: column;
-    padding: 2vw 4vw;
-    width: 90%;
-    max-width: 600px;
+    padding: 1vw 2vw; /* Reduce padding */
+    width: 80%; /* Adjust width */
+    max-width: 500px; /* Adjust max-width */
     border-radius: 10px;
     align-items: center;
     margin: auto; /* Center the form horizontally */
-    max-height: calc(100vh - 200px); /* Adjust the value according to your footer height */
+    margin-bottom: 40px; /* Add margin at the bottom to leave space for the footer */
+    margin-top: 20px; /* Add margin at the top to create space between the form and the footer */
     overflow-y: auto; /* Enable vertical scrollbar when form content exceeds viewport height */
 }
 
@@ -108,14 +111,14 @@ form input,
 form textarea {
     border: 0;
     margin: 10px 0;
-    padding: 20px;
+    padding: 15px; /* Reduce input padding */
     outline: none;
     background: #f5f5f5;
     font-size: 16px;
 }
 
 form button {
-    padding: 15px;
+    padding: 12px; /* Reduce button padding */
     background: #ff5361;
     color: #fff;
     font-size: 18px;
@@ -151,11 +154,17 @@ p {
     display: flex;
     flex-direction: column-reverse;
 }
+
 footer {
-    padding: 20px;
+    position: fixed; /* Fixed position to keep it at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px; /* Reduce footer padding */
     background-color: rgba(180, 132, 108, 0.8);
     display: flex;
     justify-content: center;
+    z-index: 1; /* Ensure footer is above the form */
 }
 
 .container {
@@ -177,14 +186,4 @@ footer {
 
 .container a:hover img {
     transform: scale(1.1); /* Add a hover effect */
-}
-
-
-.container a {
-    display: inline-block; /* Ensure each link is on its own line */
-}
-
-.container a img {
-    width: 40px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
 }
