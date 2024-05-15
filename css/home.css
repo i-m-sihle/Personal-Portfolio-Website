@@ -5,7 +5,7 @@
 }
 
 body {
-    overflow-y: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 header {
@@ -90,6 +90,8 @@ nav .navMenu .navItems .navLinks.active {
 
 main {
     background-color: rgba(227, 208, 185, 0.7);
+    padding: 2rem; /* Added padding to create space around main content */
+    min-height: calc(100vh - 60px); /* Ensure main takes full height minus header/footer */
 }
 
 main .content {
@@ -98,10 +100,10 @@ main .content {
     justify-content: space-between;
     flex-direction: column;
     gap: 5rem;
-    padding: 3rem;
+    padding: 3rem 0;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     main .content {
         flex-direction: row;
     }
@@ -169,12 +171,30 @@ main .content .icons a img {
 footer {
     padding: 20px;
     background-color: rgba(180, 132, 108, 0.8);
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.container {
+footer .container {
     display: flex;
-    max-width: 500px;
-    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .container a {
+    display: inline-block;
+}
+
+footer .container a img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .container a:hover img {
+    transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -187,5 +207,54 @@ footer {
         transform: translateY(0);
         background-color: unset;
         position: unset;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 767px) {
+    nav .logo {
+        font-size: 2.5rem;
+    }
+
+    nav .navMenu .navItems .navLinks {
+        font-size: 1rem;
+    }
+
+    main .content {
+        padding: 1.5rem;
+        gap: 2.5rem;
+    }
+
+    main .content__img {
+        width: 50%;
+    }
+
+    main .content__img2 img {
+        max-width: 100%;
+    }
+
+    main .content .content__text .icons > a {
+        width: 10%;
+    }
+
+    main .content .content__text .icons a > img,
+    main .content .icons a img {
+        width: 100%;
+    }
+
+    .name h1 {
+        font-size: 1.5rem;
+    }
+
+    .name span {
+        font-size: clamp(1.5rem, 8vw + .5rem, 3rem);
+    }
+
+    .ptag {
+        font-size: 1.2rem;
+    }
+
+    footer .container a img {
+        width: 30px;
     }
 }

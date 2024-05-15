@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    overflow-y: hidden;
+    overflow-y: auto; /* Allow vertical scrolling */
     min-height: 100%;
     background-color: rgba(227, 208, 185, 0.7); /* Background color of the entire body */
 }
@@ -57,7 +57,7 @@ nav .navMenu .navItems .navLinks.active {
 
 main {
     background-color: rgba(227, 208, 185, 0.7); /* Background color of the main content */
-    min-height: calc(100vh - 180px); /* Adjust the height to leave space for the footer */
+    min-height: calc(100vh - 60px); /* Adjust the height to leave space for the footer */
 }
 
 main .content {
@@ -95,9 +95,7 @@ form {
     max-width: 500px; /* Adjust max-width */
     border-radius: 10px;
     align-items: center;
-    margin: auto; /* Center the form horizontally */
-    margin-bottom: 40px; /* Add margin at the bottom to leave space for the footer */
-    margin-top: 20px; /* Add margin at the top to create space between the form and the footer */
+    margin: 20px auto 40px auto; /* Center the form horizontally and add margin at the top and bottom */
     overflow-y: auto; /* Enable vertical scrollbar when form content exceeds viewport height */
 }
 
@@ -167,23 +165,71 @@ footer {
     z-index: 1; /* Ensure footer is above the form */
 }
 
-.container {
+footer .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Adjust as needed */
+    gap: 70px; /* Adjust the gap between the icons */
 }
 
-.container a {
+footer .container a {
     display: inline-block; /* Ensure each link is on its own line */
 }
 
-.container a img {
+footer .container a img {
     width: 40px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
     transition: transform 0.3s ease-in-out;
 }
 
-.container a:hover img {
+footer .container a:hover img {
     transform: scale(1.1); /* Add a hover effect */
+}
+
+@media screen and (max-width: 767px) {
+    nav .logo {
+        font-size: 2.5rem;
+    }
+
+    nav .navMenu .navItems .navLinks {
+        font-size: 1rem;
+    }
+
+    main .content {
+        padding: 1.5rem;
+        gap: 2.5rem;
+    }
+
+    main .content__img {
+        width: 50%;
+    }
+
+    main .content__img2 img {
+        max-width: 100%;
+    }
+
+    main .content .content__text .icons > a {
+        width: 10%;
+    }
+
+    main .content .content__text .icons a > img,
+    main .content .icons a img {
+        width: 100%;
+    }
+
+    .name h1 {
+        font-size: 1.5rem;
+    }
+
+    .name span {
+        font-size: clamp(1.5rem, 8vw + .5rem, 3rem);
+    }
+
+    .ptag {
+        font-size: 1.2rem;
+    }
+
+    footer .container a img {
+        width: 30px;
+    }
 }

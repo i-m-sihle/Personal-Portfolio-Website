@@ -28,7 +28,7 @@
             <ul class="navMenu">
                 <li class="navItems"><a href="./about.html"  class="navLinks ">About Me</a></li>
                 <li class="navItems"><a href="./youtube.html" class="navLinks">Youtube</a></li>
-                <li class="navItems"><a href="./contactform.html" class="navLinks">Contact Me</a></li>
+                <li class="navItems"><a href="./contactform.html" class="navLinks active">Contact Me</a></li>
             </ul>
         </nav>
     </header>
@@ -51,19 +51,12 @@
 
     <footer>
         <div class="container">
-            <a href="#">
-                <img src="./img/instagram_icon.svg" alt="">
-            </a>
-
-            <a href="#">
-                <img src="./img/tiktok_icon.svg" alt="">
-            </a>
-
-            <a href="#">
-                <img src="./img/youtube_icon.svg" alt="">
-            </a>
+            <a href=" https://www.instagram.com/i.m.sihle?igsh=NHR2d3gya21ldXEy&utm_source=qr"><img src="./img/instagram_icon.svg" alt=""></a>
+            <a href="https://www.tiktok.com/@i.m.sihle?_t=8mMqNaJIj1q&_r=1"><img src="./img/tiktok_icon.svg" alt=""></a>
+            <a href=" https://www.youtube.com/@theendlovusisters"><img src="./img/youtube_icon.svg" alt=""></a>
         </div>
     </footer>
+
     <script>
         document.getElementById("contactForm").addEventListener("submit", async (e) => {
             e.preventDefault();
@@ -80,10 +73,10 @@
                 message,
             });
 
-            // Show confirmation message
+          
             alert("Your message has been sent!");
 
-            // Optionally, clear form fields after submission
+          
             document.getElementById("contactForm").reset();
         });
     </script>

@@ -15,7 +15,7 @@ app.use(cors());
 app.post("/send-email", (req, res) => {
   const { email, subject,phone,  message } = req.body;
 
-  console.log(email, phone)
+  // console.log(email, phone)
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
